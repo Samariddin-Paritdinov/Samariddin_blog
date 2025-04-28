@@ -7,7 +7,7 @@ class Post(models.Model):
     description = models.TextField(max_length=1000, null=True, blank=True)
     cover = models.ImageField(upload_to='image/', null=True, blank=True)
     owner = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    view_count = models.PositiveIntegerField(default=0)
+    views_count = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
